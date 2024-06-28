@@ -1,3 +1,18 @@
+:root {
+  /* Primary */
+
+--Strong-cyan: hsl(172, 67%, 45%);
+
+/* Neutral */
+
+--Very-dark-cyan: hsl(183, 100%, 15%);
+--Dark-grayish-cyan: hsl(186, 14%, 43%);
+--Grayish-cyan: hsl(184, 14%, 56%);
+--Light-grayish-cyan: hsl(185, 41%, 84%);
+--Very-light-grayish-cyan: hsl(189, 41%, 97%);
+--White: hsl(0, 0%, 100%);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +22,7 @@
 
 main{
   border: 1px solid blue;
+  background-color: var(--Very-light-grayish-cyan);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,22 +30,31 @@ main{
 
 .container {
   border: 2px solid orangered;
+  background-color: var(--White);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
 }
 
+
+/************ TOP START  *****************/
 .top {
   border: 1px solid cyan;
-  width: 90%;
-  margin: 20px 50px;
+  width: 85%;
+  margin: 20px 80px;
 
 }
 
 .sub-title {
   border: 1px solid purple;
+  font-size: 16px;
+  margin-bottom: 10px;
   align-self: flex-start;
+  color: var(--Dark-grayish-cyan);
+  font-weight: 700;
 }
 
 .bill {
@@ -48,7 +73,35 @@ main{
 
 input {
   text-align: right;
-  /* border: none; */
-  width: 50%;
+  border: none;
+  width: 80%;
+  font-weight: 700;
+  color: var(--Very-dark-cyan);
 }
+
+/************ TOP END  *****************/
+
+/************ MIDDLE START  *****************/
+
+.middle {
+  border: 1px solid cyan;
+  /* width: 85%; */
+}
+
+.tip-percentage {
+  display: grid;
+  grid-template-columns: repeat(2, 150px);
+  gap: 12px;
+}
+
+.percentage {
+  padding: 8px 0;
+  font-weight: 700;
+  background-color: var(--Very-dark-cyan);
+  color: var(--White);
+  border-radius: 10px;
+  border: none;
+}
+
+/************ MIDDLE END  *****************/
 
