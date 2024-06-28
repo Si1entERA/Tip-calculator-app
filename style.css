@@ -22,7 +22,7 @@
 
 main{
   border: 1px solid blue;
-  background-color: var(--Very-light-grayish-cyan);
+  background-color: var(--Light-grayish-cyan);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -37,6 +37,15 @@ main{
   flex-direction: column;
   align-items: center;
   width: 100%;
+}
+
+header {
+  margin: 28px 0;
+}
+
+header h1 {
+  font-size: 25px;
+  color: var(--Very-dark-cyan);
 }
 
 
@@ -105,3 +114,62 @@ input {
 
 /************ MIDDLE END  *****************/
 
+/************ BOTTOM START  *****************/
+
+.bottom {
+  border: 1px solid cyan;
+  background-color: var(--Very-dark-cyan);
+  border-radius: 10px;
+  padding: 25px 15px;
+  width: 80%;
+
+}
+
+.tip-amount, .total-amount{
+  border: 1px solid green;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.desc {
+  border: 1px solid purple;
+}
+
+.desc p {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.desc p:first-child {
+  color: var(--White);
+}
+
+.desc p:last-child {
+  color: var(--Light-grayish-cyan);
+}
+
+.person-price {
+  border: 1px solid purple;
+  display: flex;
+  justify-content: center;
+}
+
+.person-price img {
+  width: 18px;
+}
+
+span {
+  font-size: 30px;
+}
+
+.person-price p {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--Strong-cyan);
+  text-align: center;
+}
+
+/************ BOTTOM END  *****************/
