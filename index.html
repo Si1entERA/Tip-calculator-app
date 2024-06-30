@@ -26,12 +26,17 @@
     <section class="container">
 
       <!-- BILL START -->
-      <section class="top">
+      <section class="left-side">
+        <section class="top">
           <p class="sub-title">Bill</p>
-        <section class="bill">
+        <section class="bill" id="billAmountInput">
           <img src="./images/icon-dollar.svg" alt="dollar icon">
-          <input type="text" value="142.55">
+          <input type="text" class="bill-amount" placeholder="142.55">
         </section>
+        <section class="bill-error-box">
+          <p class="bill-error">Bill amount can't be zero!</p>
+        </section>
+
       </section>
       <!-- BILL END -->
 
@@ -39,70 +44,60 @@
         <section class="middle">
           <p class="sub-title">Select Tip %</p>
           <section class="tip-percentage">
-            <button class="percentage">5%</button>
-            <button class="percentage">10%</button>
-            <button class="percentage">15%</button>
-            <button class="percentage">25%</button>
-            <button class="percentage">50%</button>
-            <input type="text" value="Custom">
+            <button class="percentage" value ="5">5%</button>
+            <button class="percentage" value ="10">10%</button>
+            <button class="percentage" value="15">15%</button>
+            <button class="percentage" value="25">25%</button>
+            <button class="percentage" value="50">50%</button>
+            <input type="text" class="customTip" id="customTip" placeholder="Custom">
+
           </section>
         </section>
 
         <section class="top">
-          <p class="sub-title">Number of People</p>
-        <section class="bill">
+          <p class="sub-title">
+            Number of People
+            <span class="error">Can't be zero!</span>
+          </p>
+        <section class="bill" id="numOfPeopleInput">
           <img src="./images/icon-person.svg" alt="person icon">
-          <input type="text" value="5">
+          <input type="text" class="numOfPeople">
         </section>
+      </section>
       </section>
       <!-- SELECT TIP END -->
 
       <!-- AMOUNT START -->
         <section class="bottom">
-          <section class="tip-amount">
-            <section class="desc">
-              <p>Tip Amount</p>
-              <p>/ person</p>
+          <section class="amount-section">
+            <section class="tip-amount">
+              <section class="desc">
+                <p>Tip Amount</p>
+                <p>/ person</p>
+              </section>
+              <section class="person-price">
+                <span>$</span><p class="tip-per-person">4.27</p>
+              </section>
             </section>
-            <section class="person-price">
-              <p><span>$</span>4.27</p>
+  
+            <section class="total-amount">
+              <section class="desc">
+                <p>Total</p>
+                <p>/ person</p>
+              </section>
+              <section class="person-price">
+                <span>$</span><p class="total-per-person">32.79</p>
+              </section>
             </section>
           </section>
-
-          <section class="total-amount">
-            <section class="desc">
-              <p>Total</p>
-              <p>/ person</p>
-            </section>
-            <section class="person-price">
-              <p><span>$</span>32.79</p>
-            </section>
-          </section>
+          <button class="reset">RESET</button>
           </section>
         </section>
       <!-- AMOUNT END -->
     </section>
   </main>
 
-  <!-- Bill
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset -->
-
 </body>
+
+<script src="main.js"></script>
 </html>
