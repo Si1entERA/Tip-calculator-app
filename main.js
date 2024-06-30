@@ -22,11 +22,15 @@ const customTipInput = document.getElementById("customTip");
 
 //clear
 const clearAmount = () => {
+  billAmount.value = "";
+  customTipInput.value = "";
+  numOfPeople.value = "";
   tipPerPerson.innerHTML = '0.00';
   totalPerPerson.innerHTML = '0.00';
 }
 reset.addEventListener("click", clearAmount);
 
+//error for number of people input
 const peopleError = () => {
   errorNumOfPeople.style.display = 'flex';
   numOfPeopleBg.style.backgroundColor = 'var(--light-red)';
@@ -40,6 +44,7 @@ const peopleError = () => {
   },3000);
 }
 
+//error for bill input
 const billAmountError = () => {
   errorBillAmount.style.display = 'flex';
   billAmountInput.style.backgroundColor = 'var(--light-red)';
@@ -58,18 +63,19 @@ const customTip = (e) => {
   calculate(percentage);
 }
 
+//calculate tip
 const calculate = (e) => {
 
   let tip = billAmount.value * (e.currentTarget.value / 100)
 
   if(billAmount.value <= 0){
     billAmountError()
-    console.log('bill amount is 0.00')
+    console.log('bill amount is less than 0.00')//test
   }
 
   if(numOfPeople.value <= 0){
     peopleError();
-    console.log('number of people error')
+    console.log('number of people less than 0')//test
   }
   
 
@@ -77,14 +83,11 @@ const calculate = (e) => {
   tipPerPerson.innerHTML = tipAmount;
 
   const tipTotal = (Number(billAmount.value) + tip) / numOfPeople.value
-  totalPerPerson.innerHTML = tipTotal.toFixed(2);
-
-  console.log( numOfPeople)
-
-  
+  totalPerPerson.innerHTML = tipTotal.toFixed(2);  
 
 }
 
+//target button
 buttons.forEach((button) => {
   button.addEventListener('click', (e) => {
     buttons.forEach((btn) => {
@@ -97,6 +100,7 @@ buttons.forEach((button) => {
   });
 });
 
+//custom input button
 customTipInput.addEventListener("input", calculate)
 
 
